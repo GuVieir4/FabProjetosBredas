@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+
+:root {
+    --primary-blue: #2E54A6;
+    --background-dark: #10101E;
+    --text-white: #ffffff;
+    --gray-200: #c3c3d1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Martian Mono", monospace;
+}
+
+.promo-register {
+    width: 100%;
+    display: inline-flex;
+    padding: 9px 313px 9px 343px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 9px;
+    background-color: #000;
+    color: var(--text-white);
+    font-size:14px;
+}
+
+#icon-close {
+    cursor: pointer;
+    margin-left: 20px;
+    width: 15px;
+    height: 15px;
+}
+
+.active {
+    display: none;
+}
+
+header {
+    display: flex;
+    color: var(--text-white);
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background: #181826;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--text-white);
+    font-size: 14px;
+    padding: 40px;
+}
+
+.search-bar {
+    border-radius: 62px;
+    font-size: 16px;
+    padding: 6px 6px;
+}
+
+.secao-atual {
+    background-color: #1f3a73;
+    color: var(--text-white);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.secao-atual:hover {
+    background-color: #3e66c2;
+    transform: scale(1.03);
+}
