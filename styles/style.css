@@ -2,9 +2,12 @@
 
 :root {
     --primary-blue: #2E54A6;
+    --light-blue: #6c63ff;
     --background-dark: #10101E;
     --text-white: #ffffff;
     --gray-200: #c3c3d1;
+    --gray-400: #1e1e2c;
+    --gray-500: #181826;
 }
 
 * {
@@ -12,6 +15,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Martian Mono", monospace;
+}
+
+body {
+    background-color: var(--background-dark);
 }
 
 .promo-register {
@@ -23,7 +30,11 @@
     gap: 9px;
     background-color: #000;
     color: var(--text-white);
-    font-size:14px;
+    font-size: 14px;
+}
+
+.promo-register a {
+    color: var(--light-blue);
 }
 
 #icon-close {
@@ -45,7 +56,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    background: #181826;
+    background: var(--gray-500);
 }
 
 header a {

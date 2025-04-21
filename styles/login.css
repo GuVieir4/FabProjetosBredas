@@ -1,0 +1,122 @@
+:root {
+  --primary-blue: #2E54A6;
+  --light-blue: #6c63ff;
+  --background-dark: #10101E;
+  --text-white: #ffffff;
+  --gray-200: #c3c3d1;
+  --gray-400: #1e1e2c;
+  --gray-500: #181826;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Martian Mono", monospace;
+  }
+  
+  body {
+    background-color: var(--background-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../images/logo-kirashop.svg);
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+  }
+
+  .login-box {
+    background: var(--gray-400);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px 30px;
+    color: var(--text-white);
+    box-shadow: 0 8px 32px var(--gray-500);
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+  }
+  
+  .login-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: var(--gray-200);
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
+    font-size: 15px;
+  }
+  
+  .input-group input:focus {
+    background-color: var(--gray-500);
+    outline-color: var(--primary-blue);
+    outline-style: double;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+    color: var(--text-white);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--gray-200);
+  }
+  
+  .register-link a {
+    color: var(--light-blue);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
