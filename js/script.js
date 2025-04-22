@@ -1,6 +1,6 @@
 // Pessoal, manter os scripts separados por comentários/html por enquanto. Se futuramente o tamanho do JavaScript aumentar, nós criamos outros arquivos.
 
-// Script do Index
+// Index > Fechar a promoção de cadastro
 
 const btnClose = document.getElementById('icon-close');
 const promoRegister = document.getElementById('promo-register');
@@ -11,7 +11,7 @@ btnClose.addEventListener("click", () => {
     promoRegister.classList.add('active')
 })
 
-// Script da Página de Login
+// Index > Dropdown
 
 const userIcon = document.getElementById("user-icon");
 const dropdownMenu = document.getElementById("dropdown-menu");

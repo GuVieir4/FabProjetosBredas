@@ -71,22 +71,41 @@ nav a {
     white-space: nowrap;
 }
 
-.search-bar {
-    border-radius: 62px;
-    font-size: 16px;
-    padding: 6px 12px;
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+   }
+   
+   .input {
     width: 100%;
-    max-width: 200px;
-}
-
-.search-bar:focus {
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: var(--text-white);
+    color: #000000;
+    transition: 0.2s ease;
+   }
+      
+   .input:focus {
+    outline-style: solid;
     outline-color: var(--primary-blue);
-    outline-style: double;
-}
+    background-color: var(--text-white);
+   }
 
-.search-bar:focus::placeholder {
-    color: var(--primary-blue);
-}
+   .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+   }
 
 .secao-atual {
     background-color: #1f3a73;
