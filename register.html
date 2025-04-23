@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="./styles/login.css"/>
   <link rel="shortcut icon" href="./images/logo-ico.ico" type="image/x-icon">
-  <title>Login Page</title>
+  <title>Register Page</title>
 </head>
 <body>
   <div class="container">
-    <form class="login-box">
-      <h2>Bem-vindo de volta</h2>
+    <form class="login-box" id="formulario">
+      <h2>Cadastre-se agora</h2>
       <div class="input-group">
         <label for="email">E-mail</label>
         <input type="email" id="email" placeholder="Digite seu e-mail" required />
@@ -19,10 +19,18 @@
         <label for="password">Senha</label>
         <input type="password" id="password" placeholder="Digite sua senha" required />
       </div>
+      <div class="input-group">
+        <label for="confirm-password">Confirmar senha</label>
+        <input type="password" id="confirm-password" placeholder="Confirme sua senha" required />
+      </div>
       <button class="btnSubmit" type="submit" id="login">Entrar</button>
-      <p class="register-link">Não tem conta? <a href="register.html">Cadastre-se</a></p>
+        <div class="badges" id="alertErro">
+            <p class="red">As senhas não coincidem</p>
+        </div>
+      <p class="register-link">Já possui conta? <a href="login.html">Faça o Login</a></p>
       <p class="register-link"><a href="index.html">Voltar</a></p>
     </form>
   </div>
+  <script defer src="./js/script.js"></script>
 </body>
 </html>
