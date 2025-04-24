@@ -17,6 +17,10 @@
     font-family: "Martian Mono", monospace;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--background-dark);
 }
@@ -82,9 +86,9 @@ nav a {
     align-items: center;
     position: relative;
     max-width: 190px;
-   }
-   
-   .input {
+}
+
+.input {
     width: 100%;
     height: 40px;
     line-height: 28px;
@@ -96,21 +100,21 @@ nav a {
     background-color: var(--text-white);
     color: #000000;
     transition: 0.2s ease;
-   }
-      
-   .input:focus {
+}
+
+.input:focus {
     outline-style: solid;
     outline-color: var(--primary-blue);
     background-color: var(--text-white);
-   }
+}
 
-   .icon {
+.icon {
     position: absolute;
     left: 1rem;
     fill: #9e9ea7;
     width: 1rem;
     height: 1rem;
-   }
+}
 
 .secao-atual {
     background-color: #1f3a73;
@@ -190,13 +194,13 @@ nav a {
     width: 100%;
     height: 668px;
     gap: 40px;
-  }
-  
-  .chamada {
+}
+
+.chamada {
     max-width: 40%;
-  }
-  
-  .chamada h1 {
+}
+
+.chamada h1 {
     color: var(--text-white);
     font-size: 64px;
     font-style: normal;
@@ -204,17 +208,17 @@ nav a {
     line-height: 80px;
     letter-spacing: 6px;
     margin-bottom: 20px;
-  }
-  
-  .chamada p {
+}
+
+.chamada p {
     color: var(--text-white);
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     margin-bottom: 30px;
-  }
-  
-  .chamada a {
+}
+
+.chamada a {
     display: inline-block;
     padding: 16px 32px;
     border: none;
@@ -226,19 +230,19 @@ nav a {
     cursor: pointer;
     text-decoration: none;
     transition: background 0.3s ease;
-  }
-  
-  .chamada a:hover {
+}
+
+.chamada a:hover {
     background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
-  }
-  
-  .banner img {
+}
+
+.banner img {
     max-width: 100%;
     height: auto;
     border-radius: 12px;
-  }
+}
 
-  .banner-marcas {
+.banner-marcas {
     width: 100%;
     background-color: var(--primary-blue);
     display: flex;
@@ -258,3 +262,93 @@ nav a {
     height: auto;
     object-fit: contain;
 }
+
+.lancamentos {
+    margin-top: 70px;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gray-200);
+    text-align: center;
+}
+
+.container-lancamentos {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container-lancamentos .nome-produto {
+    color: var(--text-white);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.container-lancamentos .valor-produto {
+    color: var(--text-white);
+    font-size: 24px;
+}
+
+.cards-produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+.imagem-produto {
+    background-color: #f0eeed;
+    width: 245px;
+    height: 270px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imagem-produto img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.info-produto {
+    margin-left: 0;
+}
+
+.info-produto .nome-produto {
+    margin-top: 10px;
+}
+
+/* Esquema de Avaliação Obtido no Uiverse */
+.avaliacao-produto {
+    display: inline-block;
+}
+
+.avaliacao-produto input {
+    display: none;
+}
+
+.avaliacao-produto label {
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.avaliacao-produto label:before {
+    content: '\2605';
+    font-size: 30px;
+}
+
+.avaliacao-produto input:checked~label,
+.avaliacao-produto label:hover,
+.avaliacao-produto label:hover~label {
+    color: #ffc633;
+    transition: color 0.3s;
+}
+/* Fim da Seção de Avaliação */
