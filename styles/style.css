@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
 
+/* Variáveis */
 :root {
     --primary-blue: #2E54A6;
     --light-blue: #6c63ff;
@@ -10,6 +11,7 @@
     --gray-500: #181826;
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +27,7 @@ body {
     background-color: var(--background-dark);
 }
 
+/* Pop-up de Promoção */
 .promo-register {
     width: 100%;
     padding: 10px 5%;
@@ -52,6 +55,7 @@ body {
 .active {
     display: none;
 }
+/* Fim do Pop-up de Promoção */
 
 header {
     background: var(--gray-500);
@@ -59,6 +63,7 @@ header {
     padding: 10px 5%;
 }
 
+/* Menu de Navegação */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -80,6 +85,7 @@ nav a {
     width: 45%;
 }
 
+/* Search Bar */
 .group {
     display: flex;
     line-height: 28px;
@@ -107,6 +113,7 @@ nav a {
     outline-color: var(--primary-blue);
     background-color: var(--text-white);
 }
+/* Fim da Search Bar */
 
 .icon {
     position: absolute;
@@ -155,37 +162,9 @@ nav a {
 .dropdown-menu a:hover {
     background-color: #f0f0f0;
 }
+/* Fim do Menu de Navegação */
 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .search-bar {
-        max-width: 100%;
-        margin-top: 8px;
-    }
-
-    header a {
-        padding: 6px 10px;
-    }
-
-    .promo-register {
-        flex-direction: column;
-        padding: 10px 20px;
-        font-size: 13px;
-    }
-
-    .user-dropdown {
-        align-self: flex-end;
-    }
-
-    .banner {
-        display: none;
-    }
-}
-
+/* Seção de Destaque */
 .destaque-loja {
     display: flex;
     align-items: center;
@@ -241,7 +220,9 @@ nav a {
     height: auto;
     border-radius: 12px;
 }
+/* Fim da Seção de Destaque */
 
+/* Banner de Marcas */
 .banner-marcas {
     width: 100%;
     background-color: var(--primary-blue);
@@ -262,7 +243,9 @@ nav a {
     height: auto;
     object-fit: contain;
 }
+/* Fim do Banner de Marcas */
 
+/* Seção Lançamentos */
 .lancamentos, .titulo-categorias {
     margin-top: 70px;
     font-size: 48px;
@@ -351,9 +334,10 @@ nav a {
     color: #ffc633;
     transition: color 0.3s;
 }
-
 /* Fim da Seção de Avaliação */
+/* Fim da Seção Lançamentos */
 
+/* Botão de Carregar mais Cards */
 .carregar-mais {
     background-color: transparent;
     color: var(--text-white);
@@ -370,10 +354,11 @@ nav a {
     cursor: pointer;
 }
 
+/* Seção Categorias */
 .container-categorias {
     background-color: var(--primary-blue);
-    width: 1240px;
-    height: 870px;
+    max-width: 1240px;
+    width: 90%;
     border-radius: 40px;
     margin: 70px auto 0 auto;
     display: flex;
@@ -381,13 +366,13 @@ nav a {
     gap: 30px;
     padding: 40px;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 .container-categorias h3 {
     font-size: 24px;
     font-weight: 700;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin: 20px;
 }
 
 .container-categorias img {
@@ -397,34 +382,83 @@ nav a {
     height: auto;
 }
 
-.container-headset {
+.container-headset, .container-soundbar, .container-teclado, .container-mouse {
     background-color: var(--text-white);
-    width: 410px;
-    height: 290px;
     border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 290px;
+    width: calc(50% - 15px);
 }
 
-.container-soundbar {
-    background-color: var(--text-white);
-    width: 685px;
-    height: 290px;
-    border-radius: 20px;
-}
-
+/* Arrumar tamanho da imagem */
 .container-soundbar img {
     margin-top: 90px;
 }
 
-.container-teclado {
-    background-color: var(--text-white);
-    width: 685px;
-    height: 290px;
-    border-radius: 20px;
+/* Arrumar tamanho da imagem */
+.container-mouse img {
+    width: 60%;
 }
 
-.container-mouse {
-    background-color: var(--text-white);
-    width: 410px;
-    height: 290px;
-    border-radius: 20px;
+/* Ajustes Responsividade Mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar {
+        max-width: 100%;
+        margin-top: 8px;
+    }
+
+    header a {
+        padding: 6px 10px;
+    }
+
+    .promo-register {
+        flex-direction: column;
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .user-dropdown {
+        align-self: flex-end;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .lancamentos, .titulo-categorias {
+        font-size: 36px;
+    }
+
+    .container-lancamentos, .container-categorias {
+        margin-top: 30px;
+    }
+
+    .container-headset, .container-soundbar, .container-teclado, .container-mouse {
+        width: 100%;
+    }
+
+    .container-categorias {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .container-categorias h3 {
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .container-categorias img {
+        max-width: 100%;
+    }
+
+    .container-mouse img {
+        width: 100%;
+    }
 }
