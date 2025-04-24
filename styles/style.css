@@ -263,7 +263,7 @@ nav a {
     object-fit: contain;
 }
 
-.lancamentos {
+.lancamentos, .titulo-categorias {
     margin-top: 70px;
     font-size: 48px;
     font-weight: 700;
@@ -351,4 +351,80 @@ nav a {
     color: #ffc633;
     transition: color 0.3s;
 }
+
 /* Fim da Seção de Avaliação */
+
+.carregar-mais {
+    background-color: transparent;
+    color: var(--text-white);
+    width: 250px;
+    height: 50px;
+    gap: 12px;
+    padding: 16px 54px;
+    border-radius: 12px;
+    border: 1px solid var(--primary-blue);
+    margin: 70px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container-categorias {
+    background-color: var(--primary-blue);
+    width: 1240px;
+    height: 870px;
+    border-radius: 40px;
+    margin: 70px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.container-categorias h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.container-categorias img {
+    display: block;
+    margin: 20px auto 0 auto;
+    max-width: 80%;
+    height: auto;
+}
+
+.container-headset {
+    background-color: var(--text-white);
+    width: 410px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.container-soundbar {
+    background-color: var(--text-white);
+    width: 685px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.container-soundbar img {
+    margin-top: 90px;
+}
+
+.container-teclado {
+    background-color: var(--text-white);
+    width: 685px;
+    height: 290px;
+    border-radius: 20px;
+}
+
+.container-mouse {
+    background-color: var(--text-white);
+    width: 410px;
+    height: 290px;
+    border-radius: 20px;
+}
