@@ -6,6 +6,8 @@
   --gray-200: #c3c3d1;
   --gray-400: #1e1e2c;
   --gray-500: #181826;
+  --sucess-color: #1d8338;
+  --error-color: #881337;
 }
 
 * {
@@ -70,10 +72,20 @@ body {
   font-size: 15px;
 }
 
+.input-group input:user-valid {
+  border: 1px solid #1d8338;
+  box-shadow: 3px 3px #1d8338;
+}
+
+.input-group input:user-invalid {
+  border: 1px solid var(--error-color);
+  box-shadow: 3px 3px var(--error-color);
+}
+
 .input-group input:focus {
   background-color: var(--gray-500);
-  outline-color: var(--primary-blue);
-  outline-style: double;
+  outline-style: none;
+  box-shadow: 3px 3px #1d8338;
 }
 
 .btnSubmit {

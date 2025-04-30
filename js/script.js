@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Index > Menu Hambúrguer
 
-    document.getElementById("hamburger-menu").addEventListener("click", function() {
-        const mobileMenu = document.getElementById("mobile-menu");
-        mobileMenu.classList.toggle("active");
-    });
+    // document.getElementById("hamburger-menu").addEventListener("click", function() {
+    //     const mobileMenu = document.getElementById("mobile-menu");
+    //     mobileMenu.classList.toggle("active");
+    // });
     
     // Index > Dropdown
     

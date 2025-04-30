@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/componentes.css">
     <link rel="shortcut icon" href="./images/logo-ico.ico" type="image/x-icon">
     <title>Homepage</title>
 </head>
 <body>
     <div class="promo-register" id="promo-register">
-        <p>Cadastre-se e ganhe 20% de desconto no seu primeiro pedido. <a href="register.html">Cadastre-se agora</a> <img id="icon-close" src="./images/icon-close.svg" alt="ícone de Close"></p>
+        <p>Cadastre-se e ganhe 20% de desconto no seu primeiro pedido. <a href="./pages/register.html">Cadastre-se agora</a> <img id="icon-close" src="./images/icon-close.svg" alt="ícone de Close"></p>
     </div>
-    <header>
+    <header id="Header">
         <nav>
             <a href="#"><img src="./images/fullogo.png" alt="Logo Kirashop" class="logo-kirashop"></a>
             <a href="#">Promoções</a>
@@ -25,7 +26,7 @@
             <div class="user-dropdown">
                 <a href="#"><img src="./images/icon-user.svg" id="user-icon" alt="Ícone de Usuário"></a>
                 <div class="dropdown-menu" id="dropdown-menu">
-                    <a href="login.html">Login</a>
+                    <a href="./pages/login.html">Login</a>
                 </div>
             </div>
             <!-- Ícone de Menu Hambúrguer -->
@@ -71,7 +72,7 @@
             <div class="container-lancamentos">
                 <div class="cards-produtos">
                     <div class="imagem-produto">
-                        <img src="./images/MouseAttackShark.svg" alt="Mouse Attack Shark">
+                        <a href="./pages/productDetails.html"><img src="./images/MouseAttackShark.svg" alt="Mouse Attack Shark"></a>
                     </div>
                     <div class="info-produto">
                         <h4 class="nome-produto">Attack Shark</h4>
@@ -225,6 +226,8 @@
                 <button class="btnSubmit" type="submit" id="login">Inscreva na Newsletter</button>
             </form>
         </div>
+
+        <div class="scroll-up"><a href="#Header">&#8593</a></div>
 
         <footer>
             <div class="footer-container">

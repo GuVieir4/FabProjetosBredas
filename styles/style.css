@@ -9,6 +9,8 @@
     --gray-200: #c3c3d1;
     --gray-400: #1e1e2c;
     --gray-500: #181826;
+    --sucess-color: #1d8338;
+    --error-color: #881337;
 }
 
 /* Reset */
@@ -28,162 +30,10 @@ body {
     background-color: var(--background-dark);
 }
 
-/* Pop-up de Promoção */
-.promo-register {
-    width: 100%;
-    padding: 10px 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    background-color: #000;
-    font-size: 14px;
-    text-align: center;
-    flex-wrap: wrap;
-}
-
-.promo-register a {
-    color: var(--light-blue);
-}
-
-#icon-close {
-    cursor: pointer;
-    width: 15px;
-    height: 15px;
-}
-
 .active {
     display: none;
 }
 /* Fim do Pop-up de Promoção */
-
-header {
-    background: var(--gray-500);
-    padding: 10px 5%;
-}
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    font-size: 14px;
-    padding: 8px 12px;
-    white-space: nowrap;
-}
-
-.logo-kirashop {
-    height: 45%;
-    width: 45%;
-}
-
-.group {
-    display: flex;
-    line-height: 28px;
-    align-items: center;
-    position: relative;
-    max-width: 190px;
-    flex: 1;
-}
-
-.input {
-    width: 100%;
-    height: 40px;
-    line-height: 28px;
-    padding: 0 1rem;
-    padding-left: 2.5rem;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    outline: none;
-    background-color: var(--text-white);
-    color: #000000;
-    transition: 0.2s ease;
-}
-
-.input:focus {
-    background-color: var(--gray-200);
-    outline-style: none;
-    box-shadow: 5px 5px #1d8338;
-}
-
-.icon {
-    position: absolute;
-    left: 1rem;
-    fill: #9e9ea7;
-    width: 1rem;
-    height: 1rem;
-}
-
-.user-dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    background-color: var(--text-white);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    z-index: 1000;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 12px 16px;
-    color: #000000;
-    text-decoration: none;
-}
-
-.dropdown-menu a:hover {
-    background-color: #f0f0f0;
-}
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.hamburger-menu span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-white);
-    border-radius: 5px;
-}
-
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    background-color: var(--gray-500);
-    padding: 20px 0;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-}
-
-.mobile-menu a {
-    text-decoration: none;
-    font-size: 14px;
-    padding: 8px 12px;
-    white-space: nowrap;
-    display: block;
-}
-
-.mobile-menu a:hover {
-    background-color: var(--primary-blue);
-}
-/* Fim do Menu de Navegação */
 
 /* Seção de Destaque */
 .destaque-loja {
@@ -194,51 +44,50 @@ nav a {
     width: 100%;
     height: 668px;
     gap: 40px;
-}
 
-.chamada {
-    max-width: 40%;
+    & .chamada {
+        max-width: 40%;
+    }
+    
+    & .chamada h1 {
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 80px;
+        letter-spacing: 6px;
+        margin-bottom: 20px;
+    }
+    
+    & .chamada p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        margin-bottom: 30px;
+    }
+    
+    & .chamada a {
+        display: inline-block;
+        padding: 16px 32px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+    
+    & .chamada a:hover {
+        background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
+    }
+    
+    & .banner img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
 }
-
-.chamada h1 {
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 80px;
-    letter-spacing: 6px;
-    margin-bottom: 20px;
-}
-
-.chamada p {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    margin-bottom: 30px;
-}
-
-.chamada a {
-    display: inline-block;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.3s ease;
-}
-
-.chamada a:hover {
-    background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
-}
-
-.banner img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-}
-/* Fim da Seção de Destaque */
 
 /* Banner de Marcas */
 .banner-marcas {
@@ -252,20 +101,18 @@ nav a {
     padding: 10px 20px;
     box-sizing: border-box;
     min-height: 120px;
-}
 
-.banner-marcas img {
-    max-height: 100px;
-    max-width: 150px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
+    & img {
+        max-height: 100px;
+        max-width: 150px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
 }
-
-/* Fim do Banner de Marcas */
 
 /* Seção Lançamentos */
-.lancamentos, .titulo-categorias {
+.lancamentos {
     margin-top: 70px;
     font-size: 48px;
     font-weight: 700;
@@ -281,6 +128,7 @@ nav a {
     justify-content: center;
     padding: 20px;
 }
+
 
 .container-lancamentos .nome-produto {
     font-size: 20px;
@@ -382,6 +230,14 @@ nav a {
     padding: 40px;
     box-sizing: border-box;
     justify-content: center;
+}
+
+.titulo-categorias {
+    margin-top: 70px;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gray-200);
+    text-align: center;
 }
 
 .container-categorias h3 {
@@ -487,66 +343,6 @@ nav a {
 
 .btnSubmit:hover {
     background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
-}
-
-footer {
-    margin-top: 70px;
-    background-color: var(--primary-blue);
-    height: auto;
-}
-
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
-
-.sobre-kirashop h1 {
-    font-size: 32px;
-    font-weight: 700px;
-    margin-left: 15px;
-}
-
-.sobre-kirashop p {
-    margin-top: 10px;
-    color: var(--gray-200);
-    font-size: 14px;
-    line-height: 20px;
-    margin-left: 15px;
-}
-
-.titulo-lista {
-    margin-left: 15px;
-    margin-top: 40px;
-    font-weight: 500px;
-    letter-spacing: 3px;
-}
-
-.infos-kirashop ul {
-    margin-left: 15px;
-    color: var(--gray-200);
-    list-style: none;
-}
-
-.infos-kirashop ul li {
-    color: var(--gray-200);
-    line-height: 19px;
-    margin-top: 25px;
-}
-
-.separacao-allrights {
-    height: 2px;
-    width: 80%;
-    margin: 20px auto;
-    background-color: var(--gray-200); 
-    border: none;
-}
-
-.allrights {
-    margin-top: 20px;
-    padding-bottom: 10px;
-    text-align: center;
 }
 
 /* Ajustes Responsividade Header e Categorias */
@@ -662,67 +458,3 @@ footer {
     }
 }
 
-/* Ajuste do Footer Começar na Metade da Newsletter em Telas Grandes */
-@media (min-width: 1275px) {
-    footer {
-        width: 100%;
-        height: 500px;
-        padding: 40px 20px;
-        position: relative;
-        margin-top: 70px;
-        margin-top: -85px;
-        z-index: 0;
-    }
-    
-    .footer-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        gap: 80px;
-        max-width: 1240px;
-        margin: 0 auto;
-        flex-wrap: wrap;
-    }
-    
-    .sobre-kirashop {
-        max-width: 300px;
-    }
-    
-    .sobre-kirashop h1 {
-        margin-top: 50px;
-    }
-    
-    .sobre-kirashop p {
-        margin-top: 25px;
-        font-size: 14px;
-        line-height: 20px;
-    }
-    
-    .infos-kirashop {
-        display: flex;
-        gap: 120px;
-        flex-wrap: wrap;
-    }
-    
-    .infos-kirashop div {
-        min-width: 160px;
-    }
-    
-    .titulo-lista {
-        margin-top: 50px;
-    }
-    
-    .infos-kirashop ul {
-        list-style: none;
-    }
-    
-    .allrights {
-        text-align: center;
-        padding: 0;
-    }
-
-    .separacao-allrights, .quebra-allrights {
-        display: none;
-    }
-}

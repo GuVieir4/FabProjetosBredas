@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/productDetails.css">
+    <link rel="stylesheet" href="../styles/componentes.css">
+    <link rel="shortcut icon" href="../images/" type="image/x-icon">
+    <title>Detalhes do Produto</title>
+</head>
+<body>
+    <div class="promo-register" id="promo-register">
+        <p>Cadastre-se e ganhe 20% de desconto no seu primeiro pedido. <a href="./register.html">Cadastre-se agora</a> <img id="icon-close" src="../images/icon-close.svg" alt="ícone de Close"></p>
+    </div>
+    <header id="Header">
+        <nav>
+            <a href="#"><img src="../images/fullogo.png" alt="Logo Kirashop" class="logo-kirashop"></a>
+            <a href="#">Promoções</a>
+            <a href="#Lancamentos">Lançamentos</a>
+            <a href="#">Marcas</a>
+            <div class="group">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                <input placeholder="Pesquisar..." type="search" class="input">
+            </div>
+            <a href="#"><img src="../images/icon-cart.svg" alt="Ícone de Carrinho"></a>
+            <div class="user-dropdown">
+                <a href="#"><img src="../images/icon-user.svg" id="user-icon" alt="Ícone de Usuário"></a>
+                <div class="dropdown-menu" id="dropdown-menu">
+                    <a href="login.html">Login</a>
+                </div>
+            </div>
+            <!-- Ícone de Menu Hambúrguer -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="header-inner"></div>
+        </nav>
+        <!-- Menu Mobile -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#">Promoções</a>
+            <a href="#Lancamentos">Lançamentos</a>
+            <a href="#">Marcas</a>
+        </div>
+    </header>
+    <main>
+        <ul class="trilha-navegacao">
+            <li>Home ></li>
+            <li>Shop ></li>
+            <li>Periféricos ></li>
+            <li>Mouses</li>
+        </ul>
+
+        <section class="informacoes-produto">
+            <div class="imagens-produto">
+                <div class="imagens-produto-vertical">
+                    <img src="../images/MouseAttackShark.svg" alt="Mouse Attack Shark" class="imagem-vertical">
+                    <img src="../images/MouseAttackShark.svg" alt="Mouse Attack Shark" class="imagem-vertical">
+                    <img src="../images/MouseAttackShark.svg" alt="Mouse Attack Shark" class="imagem-vertical">
+                </div>
+                    <img src="../images/MouseAttackShark.svg" alt="Mouse Attack Shark" class="imagem-produto-principal">
+            <div class="detalhes-produto">
+                <h1 class="nome-produto">Mouse Gamer Attack Shark X6</h1>
+                <h1 class="valor-produto">R$240</h3>
+                <p class="descricao-produto">Mouse muito preciso, confortável e com sensor HERO 25K. Ideal pra quem joga FPS. RGB personalizável. Excelente custo-benefício pra um mouse gamer de alto desempenho!</p>
+                <button class="quantidade-produto">- 1 +</button>
+                <button class="botao-carrinho">Adicionar ao carrinho</button>
+            </div>
+        </section>
+        <p class="titulo-avaliacoes">Avaliações</p>
+
+        <div class="avaliacoes">
+            <!-- As avaliações estão de exemplo, remover elas quando estivermos com a API pronta -->
+            <div class="cards-avaliacoes">
+                <h1>Gustavo Henrique</h1>
+                <p>Slk compensa mto 👍</p>
+            </div>
+            <div class="cards-avaliacoes">
+                <h1>José Vitor</h1>
+                <p>Muito bom! Confortável, silencioso e conecta rápido. Vale a pena!</p>
+            </div>
+            <div class="cards-avaliacoes">
+                <h1>Daniel Victor</h1>
+                <p>É bem silencioso, mas achei o scroll meio duro. No geral, bom custo-benefício.</p>
+            </div>
+            <div class="cards-avaliacoes">
+                <h1>Felipe Garcia</h1>
+                <p>Funciona bem e o clique não faz barulho. Só podia ser um pouco maior.</p>
+            </div>
+        </div> 
+    </div>
+    </main>
+</body>
+</html>
