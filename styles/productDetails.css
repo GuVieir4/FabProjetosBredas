@@ -201,3 +201,19 @@ body {
         width: 370px;
     }
 }
+
+form input {
+    color: #000;
+}
+
+form button {
+    color: #000;
+}
+
+form input:user-valid {
+    border: 3px solid var(--sucess-color);
+  }
+
+form input:user-invalid {
+    border: 3px solid var(--error-color);
+  }

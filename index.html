@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/componentes.css">
     <link rel="shortcut icon" href="./images/logo-ico.ico" type="image/x-icon">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <title>Homepage</title>
 </head>
 <body>
@@ -219,11 +220,11 @@
 
         <div class="container-newsletter">
             <h1>FIQUE ATUALIZADO SOBRE NOSSAS ÚLTIMAS OFERTAS</h1>
-            <form action="">
+            <form id="newsletter-form">
                 <div class="input-group">
-                    <input type="email" id="email" placeholder="Digite seu e-mail" required />
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
                 </div>
-                <button class="btnSubmit" type="submit" id="login">Inscreva na Newsletter</button>
+                <button class="btnSubmit" type="submit" id="btnSubmit">Inscreva na Newsletter</button>
             </form>
         </div>
 
@@ -268,8 +269,6 @@
             <hr class="separacao-allrights">
             <p class="allrights">KIRASHOP © 2024-2025. <br class="quebra-allrights"> All Rights Reserved</p>
         </footer>
-
-
 </body>
     <script defer src="./js/script.js"></script>
 </html>

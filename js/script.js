@@ -41,18 +41,40 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Register > Confirmar senha
     
-    const form = document.getElementById("formulario");
-    const senha = document.getElementById("password");
-    const confirmarSenha = document.getElementById("confirm-password");
-    const mensagemDeErro = document.getElementById("mensagemDeErro");
-    const alertaDeErro = document.getElementById('alertErro');
+    // const form = document.getElementById("formulario");
+    // const senha = document.getElementById("password");
+    // const confirmarSenha = document.getElementById("confirm-password");
+    // const mensagemDeErro = document.getElementById("mensagemDeErro");
+    // const alertaDeErro = document.getElementById('alertErro');
     
-            form.addEventListener("submit", function (event) {
-                if (senha.value !== confirmarSenha.value) {
-                    event.preventDefault();
-                    alertaDeErro.classList.add('active')
-                }
-            });
+            // form.addEventListener("submit", function (event) {
+            //     if (senha.value !== confirmarSenha.value) {
+            //         event.preventDefault();
+            //         alertaDeErro.classList.add('active')
+            //     }
+            // });
     
     });
-    
+
+// Newsletter > Enviando Email com a API EmailJS
+(function() {
+    emailjs.init("kZkoynUIPV0OPGyY9");
+    console.log("EmailJS inicializado");
+  })();
+
+  document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    console.log("Formulário enviado");
+
+    emailjs.sendForm("service_plko91s", "template_kg43dko", this)
+      .then((response) => {
+        console.log("Resposta do envio:", response);
+        alert("Inscrição enviada com sucesso! Verifique seu e-mail.");
+        this.reset();
+      }, (error) => {
+        console.error("Erro ao enviar e-mail:", error);
+        alert("Erro ao enviar. Tente novamente.");
+      });
+  });
+  
