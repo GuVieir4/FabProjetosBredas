@@ -11,6 +11,25 @@
     --error-color: #881337;
 }
 
+#promo-register.active {
+    display: none;
+}
+
+/* Botão de Carregar mais Cards */
+.carregar-mais {
+    background-color: transparent;
+    width: 250px;
+    height: 50px;
+    gap: 12px;
+    padding: 16px 54px;
+    border-radius: 12px;
+    border: 1px solid var(--primary-blue);
+    margin: 70px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
 /* Pop-up de Promoção */
 .promo-register {
@@ -35,12 +54,6 @@
         height: 15px;
     }
 }
-
-/* .header-inner {
-    width: 100%;
-    margin: 0 auto;
-    border-bottom: 1px solid #fff;
-} */
 
 /* Header */
 header {
@@ -171,7 +184,74 @@ header {
     }
 }
 
+.container-newsletter {
+    margin: 180px auto 0 auto;
+    background-color: #000000;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 1240px;
+    padding: 36px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
 
+.container-newsletter h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: var(--gray-200);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--text-white);
+    font-size: 15px;
+    transition: ease 0.25s;
+}
+
+.input-group input:focus {
+    background-color: var(--gray-200);
+    outline-style: none;
+    box-shadow: 5px 5px #1d8338;
+}
+
+.input-group input::placeholder {
+    text-align: center;
+}
+
+.btnSubmit {
+    width: 350px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btnSubmit:hover {
+    background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
+}
+
+
+/* Footer */
 footer {
     margin-top: 70px;
     background-color: var(--primary-blue);
@@ -193,7 +273,7 @@ footer {
 }
 
 .sobre-kirashop p {
-    margin-top: 10px;
+    margin-top: 50px;
     color: var(--gray-200);
     font-size: 14px;
     line-height: 20px;
@@ -231,6 +311,25 @@ footer {
     margin-top: 20px;
     padding-bottom: 10px;
     text-align: center;
+}
+
+/* Ajuste Newsletter Mobile */
+@media (max-width: 768px) {
+    .container-newsletter {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+        padding: 36px 24px;
+        width: 90%;
+    }
+    
+    .container-newsletter h1 {
+        font-size: 20px;
+    }
+
+    .container-newsletter input, .container-newsletter button {
+        width: 100%;
+    }
 }
 
 /* Ajuste do Footer Começar na Metade da Newsletter em Telas Grandes */

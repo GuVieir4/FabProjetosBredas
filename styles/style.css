@@ -30,11 +30,6 @@ body {
     background-color: var(--background-dark);
 }
 
-.active {
-    display: none;
-}
-/* Fim do Pop-up de Promoção */
-
 /* Seção de Destaque */
 .destaque-loja {
     display: flex;
@@ -201,22 +196,6 @@ body {
 /* Fim da Seção de Avaliação */
 /* Fim da Seção Lançamentos */
 
-/* Botão de Carregar mais Cards */
-.carregar-mais {
-    background-color: transparent;
-    width: 250px;
-    height: 50px;
-    gap: 12px;
-    padding: 16px 54px;
-    border-radius: 12px;
-    border: 1px solid var(--primary-blue);
-    margin: 70px auto 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
 /* Seção Categorias */
 .container-categorias {
     background-color: var(--primary-blue);
@@ -279,71 +258,6 @@ body {
     width: 60%;
 }
 
-.container-newsletter {
-    margin: 180px auto 0 auto;
-    background-color: #000000;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 1240px;
-    padding: 36px 64px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-
-.container-newsletter h1 {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 45px;
-}
-
-.input-group {
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    font-size: 14px;
-    margin-bottom: 5px;
-    display: block;
-    color: var(--gray-200);
-}
-
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: var(--text-white);
-    font-size: 15px;
-    transition: ease 0.25s;
-}
-
-.input-group input:focus {
-    background-color: var(--gray-200);
-    outline-style: none;
-    box-shadow: 5px 5px #1d8338;
-}
-
-.input-group input::placeholder {
-    text-align: center;
-}
-
-.btnSubmit {
-    width: 350px;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.btnSubmit:hover {
-    background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
-}
 
 /* Ajustes Responsividade Header e Categorias */
 @media (max-width: 768px) {
@@ -416,18 +330,6 @@ body {
         width: 100%;
     }
 
-    .container-newsletter {
-        flex-direction: column;
-        gap: 24px;
-        text-align: center;
-        padding: 36px 24px;
-        width: 90%;
-    }
-
-    .container-newsletter h1 {
-        font-size: 20px;
-    }
-
     .btnSubmit {
         width: 100%;
     }
@@ -457,4 +359,3 @@ body {
         display: flex;
     }
 }
-

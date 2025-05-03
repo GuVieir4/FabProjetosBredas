@@ -6,21 +6,22 @@
     <link rel="stylesheet" href="../styles/productDetails.css">
     <link rel="stylesheet" href="../styles/componentes.css">
     <link rel="shortcut icon" href="../images/logo-ico.ico" type="image/x-icon">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <title>Detalhes do Produto</title>
 </head>
 <body>
     <div class="promo-register" id="promo-register">
-        <p>Cadastre-se e ganhe 20% de desconto no seu primeiro pedido. <a href="./register.html">Cadastre-se agora</a> <img id="icon-close" src="../images/icon-close.svg" alt="ícone de Close"></p>
+        <p><a href="./register.html">Cadastre-se</a> e ganhe 20% de desconto no seu primeiro pedido.<img id="icon-close" src="../images/icon-close.svg" alt="ícone de Close"></p>
     </div>
     <header id="Header">
         <nav>
             <a href="../index.html"><img src="../images/fullogo.png" alt="Logo Kirashop" class="logo-kirashop"></a>
             <a href="#">Promoções</a>
-            <a href="#Lancamentos">Lançamentos</a>
+            <a href="#Lancamentos" class="link-lancamentos">Lançamentos</a>
             <a href="#">Marcas</a>
             <div class="group">
                 <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
-                <input placeholder="Pesquisar..." type="search" class="input">
+                <input placeholder="Pesquisar..." type="search" class="input" name="search-bar">
             </div>
             <a href="#"><img src="../images/icon-cart.svg" alt="Ícone de Carrinho"></a>
             <div class="user-dropdown">
@@ -60,18 +61,19 @@
                     <img src="../images/MouseAttackShark.svg" alt="Mouse Attack Shark" class="imagem-vertical">
                 </div>
                     <img src="../images/MouseAttackShark.svg" alt="Mouse Attack Shark" class="imagem-produto-principal">
-            <div class="detalhes-produto">
-                <h1 class="nome-produto">Mouse Gamer Attack Shark X6</h1>
-                <h1 class="valor-produto">R$240</h3>
-                <p class="descricao-produto">Mouse muito preciso, confortável e com sensor HERO 25K. Ideal pra quem joga FPS. RGB personalizável. Excelente custo-benefício pra um mouse gamer de alto desempenho!</p>
-                <button class="quantidade-produto">- 1 +</button>
-                <button class="botao-carrinho">Adicionar ao carrinho</button>
+                <div class="detalhes-produto">
+                    <h1 class="nome-produto">Mouse Gamer Attack Shark X6</h1>
+                    <h1 class="valor-produto">R$240</h3>
+                    <p class="descricao-produto">Mouse muito preciso, confortável e com sensor HERO 25K. Ideal pra quem joga FPS. RGB personalizável. Excelente custo-benefício pra um mouse gamer de alto desempenho!</p>
+                    <button class="quantidade-produto">- 1 +</button>
+                    <button class="botao-carrinho">Adicionar ao carrinho</button>
+                </div>
             </div>
         </section>
-        <p class="titulo-avaliacoes">Avaliações</p>
+        <!-- <p class="titulo-avaliacoes">Avaliações</p> -->
 
+        <!-- As avaliações estão de exemplo, remover elas quando estivermos com a API pronta -->
         <div class="avaliacoes">
-            <!-- As avaliações estão de exemplo, remover elas quando estivermos com a API pronta -->
             <div class="cards-avaliacoes">
                 <h1>Gustavo Henrique</h1>
                 <p>Slk compensa 👍</p>
@@ -86,11 +88,75 @@
             </div>
             <div class="cards-avaliacoes">
                 <h1>Felipe Garcia</h1>
-                <p>Funciona bem e o clique não faz barulho. Só podia ser um pouco maior.</p>
+                <p>Funciona bem e o clique não faz barulho. Só podia ser um pouco maior.unciona bem e o clique não faz barulho. Só podia ser um pouco maior.</p>
             </div>
         </div>
 
+        <button class="carregar-mais">Carregar mais</button>
+
+        <h1 class="titulo-secao">MARCAS MAIS VENDIDAS</h1>
+
+        <section class="mais-produtos">
+            <div class="cards-produtos">
+                <img class="card-produto" src="../images/LogoRedragon.svg" alt="Logo Redragon">
+                <img class="card-produto" src="../images/LogoRazer.svg" alt="Logo Razerk">
+                <img class="card-produto" src="../images/LogoLogitech.svg" alt="Logo Logitech">
+                <img class="card-produto" src="../images/LogoHyperX.svg" alt="Logo Hyper X">
+            </div>
+        </section>
     </main>
+
+    <div class="container-newsletter">
+        <h1>FIQUE ATUALIZADO SOBRE NOSSAS ÚLTIMAS OFERTAS</h1>
+        <form id="newsletter-form">
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+            </div>
+            <button class="btnSubmit" type="submit" id="btnSubmit">Inscreva na Newsletter</button>
+        </form>
+    </div>
+
+    <div class="scroll-up"><a href="#Header">&#8593</a></div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="sobre-kirashop">
+                <h1>KIRASHOP</h1>
+                <p>Temos jogos que combinam com o seu estilo e que você vai ter orgulho de jogar. Dos clássicos retrô aos lançamentos da nova geração.</p>
+            </div>
+            <div class="infos-kirashop">
+                <div>
+                    <p class="titulo-lista">INSTITUCIONAL</p>
+                    <ul>
+                        <li>Quem Somos</li>
+                        <li>Localização</li>
+                        <li>Newsletter</li>
+                        <li>Blog</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="titulo-lista">AJUDA</p>
+                    <ul>
+                        <li>Suporte ao Cliente</li>
+                        <li>Fale Conosco</li>
+                        <li>Termos de Aceite</li>
+                        <li>Política de Privacidade</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="titulo-lista">FAQ</p>
+                    <ul>
+                        <li>Entrega</li>
+                        <li>Garantia</li>
+                        <li>Como Comprar</li>
+                        <li>Pagamentos</li>
+                    </ul>
+                </div>
+            </div>      
+        </div>
+        <hr class="separacao-allrights">
+        <p class="allrights">KIRASHOP © 2024-2025. <br class="quebra-allrights"> All Rights Reserved</p>
+    </footer>
 
     <script src="../js/script.js"></script>
 </body>
