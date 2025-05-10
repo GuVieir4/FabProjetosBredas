@@ -262,8 +262,9 @@ footer {
 .footer-container {
     display: flex;
     flex-direction: column;
+    height: 50%;
     gap: 20px;
-    padding: 20px;
+    padding-top: 50px;
 }
 
 .sobre-kirashop h1 {
@@ -299,6 +300,41 @@ footer {
     margin-top: 25px;
 }
 
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-left: 15px;
+  margin-top: 20px;
+  max-width: 1240px;
+  margin: 0 auto
+}
+
+.social-icons i {
+  color: inherit; /* faz o ícone herdar a cor do <a> */
+  transition: color 0.5s;
+}
+
+.social-icons a {
+    color: var(--background-dark); /* cor do ícone */
+    background-color: var(--text-white); /* cor da bolinha */
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s, color 0.5s;
+    transition: border-radius 0.5s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+  background-color: var(--gray-500);
+  color: var(--text-white);
+  border-radius: 50%;
+}
+
 .separacao-allrights {
     height: 2px;
     width: 80%;
@@ -311,6 +347,37 @@ footer {
     margin-top: 20px;
     padding-bottom: 10px;
     text-align: center;
+}
+
+@media (max-width: 1400px) {
+    .allrights {
+        margin-top: 20px;
+        margin-left: 20px;
+        padding-bottom: 10px;
+        text-align: initial;
+    }
+    
+    .infos-kirashop{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .social-icons{
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .infos-kirashop {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .social-icons{
+        margin-top: 20px;
+        margin-left: 10px;
+    }
 }
 
 /* Ajuste Newsletter Mobile */
@@ -348,7 +415,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 100%;
+        height: 70%;
         gap: 80px;
         max-width: 1240px;
         margin: 0 auto;
@@ -393,13 +460,17 @@ footer {
     }
 
     .separacao-allrights, .quebra-allrights {
-        display: none;
+        height: 1px;
+        width: 1240px;
+        margin: 20px auto;
+        background-color: var(--gray-200); 
+        border: none;
     }
 }
 
 .scroll-up {
     display: flex;
-    background-color: #1d8338;
+    background-color: #766fff;
     position: fixed;
     z-index: 1;
     bottom: 30px;
