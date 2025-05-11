@@ -1,3 +1,12 @@
+function menuShow() {
+    let menuMobile = document.querySelector('.mobile-menu');
+    if (menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open');
+    } else {
+        menuMobile.classList.add('open')
+    }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // Index > Fechar a promoção de cadastro
@@ -7,23 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnClose && promoRegister) {
         btnClose.addEventListener("click", () => {
             promoRegister.classList.add('active');
-        });
-    }
-
-    // Index > Dropdown
-    const userIcon = document.getElementById("user-icon");
-    const dropdownMenu = document.getElementById("dropdown-menu");
-
-    if (userIcon && dropdownMenu) {
-        userIcon.addEventListener("click", (event) => {
-            event.preventDefault();
-            dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-        });
-
-        document.addEventListener("click", (event) => {
-            if (!userIcon.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.style.display = "none";
-            }
         });
     }
 

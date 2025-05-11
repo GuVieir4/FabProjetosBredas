@@ -64,7 +64,6 @@ body {
     width: 715px;
     min-height: 160px;
     height: auto;
-    /* margin-left: 100px; */
     background-color: transparent;
     border: 1px solid var(--gray-200);
     border-radius: 20px;
@@ -74,7 +73,6 @@ body {
     background-color: var(--text-white);
     width: 124px;
     height: 124px;
-    /* margin-left: 25px; */
     border-radius: 12px;
     object-fit: contain;
 }
@@ -136,6 +134,12 @@ body {
     height: 48px;
     align-items: center;
     border-radius: 8px;
+}
+
+.componentes-resumo a:hover {
+    opacity: 0.8;
+    color: var(--text-white);
+    font-weight: 400;
 }
 
 .formulario-carrinho {

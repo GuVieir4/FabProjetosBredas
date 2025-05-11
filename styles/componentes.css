@@ -57,130 +57,173 @@
 
 /* Header */
 header {
-    background: var(--gray-500);
-    padding: 10px 5%;
+    position: relative;
+    background-color: var(--gray-500);
+}
 
-    & nav {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-    }
-    
-    & nav a {
-        text-decoration: none;
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--text-white);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    list-style: none;
+    justify-content: center;
+    display: flex;
+}
+
+.nav-item {
+    margin: 0 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-white);
+}
+
+.mobile-menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu-icon div {
+    width: 32px;
+    height: 2px;
+    background: var(--text-white);
+    margin: 8px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.logo-kirashop {
+    height: 100%;
+    width: 40%;
+}
+
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+    flex: 1;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: var(--text-white);
+    color: #000000;
+    transition: 0.2s ease;
+}
+
+.input:focus {
+    background-color: var(--gray-200);
+    outline-style: none;
+    box-shadow: 5px 5px var(--primary-blue);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+.icones {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+a:hover {
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+/* Responsividade Header */
+@media screen and (max-width: 1100px) {
+    li {
         font-size: 14px;
-        padding: 8px 12px;
-        white-space: nowrap;
     }
 
-    & .logo-kirashop {
-        height: 45%;
-        width: 45%;
-    }
-    
-    & .group {
-        display: flex;
-        line-height: 28px;
-        align-items: center;
-        position: relative;
-        max-width: 190px;
-        flex: 1;
-    }
-    
-    & .input {
-        width: 100%;
-        height: 40px;
-        line-height: 28px;
-        padding: 0 1rem;
-        padding-left: 2.5rem;
-        border: 2px solid transparent;
-        border-radius: 8px;
-        outline: none;
-        background-color: var(--text-white);
-        color: #000000;
-        transition: 0.2s ease;
-    }
-    
-    & .input:focus {
-        background-color: var(--gray-200);
-        outline-style: none;
-        box-shadow: 5px 5px #1d8338;
-    }
-    
-    & .icon {
-        position: absolute;
-        left: 1rem;
-        fill: #9e9ea7;
-        width: 1rem;
-        height: 1rem;
+    .nav-bar {
+        padding: 1.5rem;
     }
 
-    & .user-dropdown {
-        position: relative;
-    }
-    
-    & .dropdown-menu {
+    .nav-item {
         display: none;
-        position: absolute;
-        right: 0;
-        top: 100%;
-        background-color: var(--text-white);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-        z-index: 1000;
+        margin: 0 12px;
     }
-    
-    & .dropdown-menu a {
+
+    .group {
+        display: none;
+    }
+
+    .icones {
+        display: none;
+    }
+
+    .mobile-menu-icon {
         display: block;
-        padding: 12px 16px;
-        color: #000000;
-        text-decoration: none;
-    }
-    
-    & .dropdown-menu a:hover {
-        background-color: #f0f0f0;
     }
 
-    & .hamburger-menu {
-        display: none;
+    .mobile-menu-icon .group {
+        background-color: transparent;
+        border: none;
         cursor: pointer;
-        flex-direction: column;
-        gap: 4px;
     }
-    
-    & .hamburger-menu span {
-        width: 25px;
-        height: 3px;
-        background-color: var(--text-white);
-        border-radius: 5px;
+
+    .mobile-menu ul {
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
-    
-    & .mobile-menu {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-        background-color: var(--gray-500);
-        padding: 20px 0;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-    }
-    
-    & .mobile-menu a {
-        text-decoration: none;
-        font-size: 14px;
-        padding: 8px 12px;
-        white-space: nowrap;
+
+    .mobile-menu .nav-item {
         display: block;
+        padding-top: 1.2rem;
     }
-    
-    & .mobile-menu a:hover {
-        background-color: var(--primary-blue);
+
+    .mobile-menu .group {
+        display: block;
+        margin: 24px auto;
+    }
+
+    .mobile-menu .group .icon {
+        display: none;
+    }
+
+    .mobile-menu .icones {
+        display: block;
+        margin-top: 24px;
+        text-align: center;
+        padding-bottom: 12px;
+    }
+
+    .open {
+        display: block;
     }
 }
 
@@ -228,7 +271,7 @@ header {
 .input-group input:focus {
     background-color: var(--gray-200);
     outline-style: none;
-    box-shadow: 5px 5px #1d8338;
+    box-shadow: 5px 5px var(--primary-blue);
 }
 
 .input-group input::placeholder {
@@ -306,17 +349,17 @@ footer {
   margin-left: 15px;
   margin-top: 20px;
   max-width: 1240px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .social-icons i {
-  color: inherit; /* faz o ícone herdar a cor do <a> */
+  color: inherit;
   transition: color 0.5s;
 }
 
 .social-icons a {
-    color: var(--background-dark); /* cor do ícone */
-    background-color: var(--text-white); /* cor da bolinha */
+    color: var(--background-dark);
+    background-color: var(--text-white);
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -347,6 +390,28 @@ footer {
     margin-top: 20px;
     padding-bottom: 10px;
     text-align: center;
+}
+
+/* Botão Fixo de Scroll-Up */
+.scroll-up {
+    display: flex;
+    background-color: #766fff;
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px black;
+}
+
+.scroll-up a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
 }
 
 @media (max-width: 1400px) {
@@ -466,25 +531,4 @@ footer {
         background-color: var(--gray-200); 
         border: none;
     }
-}
-
-.scroll-up {
-    display: flex;
-    background-color: #766fff;
-    position: fixed;
-    z-index: 1;
-    bottom: 30px;
-    right: 30px;
-    width: 45px;
-    height: 45px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    box-shadow: 0 5px 10px black;
-}
-
-.scroll-up a {
-    text-decoration: none;
-    font-size: 20px;
-    color: #000;
 }

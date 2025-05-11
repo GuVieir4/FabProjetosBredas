@@ -11,39 +11,56 @@
 </head>
 <body>
     <div class="promo-register" id="promo-register">
-        <p><a href="./register.html">Cadastre-se</a> e ganhe 20% de desconto no seu primeiro pedido.<img id="icon-close" src="../images/icon-close.svg" alt="ícone de Close"></p>
+        <p><a href="./register.html">Cadastre-se</a> agora e ganhe 20% de desconto no seu primeiro pedido.<img id="icon-close" src="../images/icon-close.svg" alt="ícone de Close"></p>
     </div>
     <header id="Header">
-        <nav>
-            <a href="../index.html"><img src="../images/fullogo.png" alt="Logo Kirashop" class="logo-kirashop"></a>
-            <a href="#">Promoções</a>
-            <a href="#Lancamentos" class="link-lancamentos">Lançamentos</a>
-            <a href="#">Marcas</a>
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/fullogo.png" alt="" class="logo-kirashop"></a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Promoções</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Lançamentos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Marcas</a></li>
+                </ul>
+            </div>
+
             <div class="group">
                 <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
                 <input placeholder="Pesquisar..." type="search" class="input" name="search-bar">
             </div>
-            <a href="#"><img src="../images/icon-cart.svg" alt="Ícone de Carrinho"></a>
-            <div class="user-dropdown">
+
+            <div class="icones">
+                <a href="#"><img src="../images/icon-kart.svg" alt="Ícone de Carrinho"></a>
                 <a href="#"><img src="../images/icon-user.svg" id="user-icon" alt="Ícone de Usuário"></a>
-                <div class="dropdown-menu" id="dropdown-menu">
-                    <a href="login.html">Login</a>
-                </div>
             </div>
-            <!-- Ícone de Menu Hambúrguer -->
-            <div class="hamburger-menu" id="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="mobile-menu-icon" onclick="menuShow()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
-            <div class="header-inner"></div>
         </nav>
-        <!-- Menu Mobile -->
-        <div class="mobile-menu" id="mobile-menu">
-            <a href="#">Promoções</a>
-            <a href="#Lancamentos">Lançamentos</a>
-            <a href="#">Marcas</a>
+
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Promoções</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Lançamentos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Marcas</a></li>
+            </ul>
+
+            <div class="group">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                <input placeholder="Pesquisar..." type="search" class="input" name="search-bar">
+            </div>
+
+            <div class="icones">
+                <a href="#"><img src="../images/icon-kart.svg" alt="Ícone de Carrinho"></a>
+                <a href="#"><img src="../images/icon-user.svg" id="user-icon" alt="Ícone de Usuário"></a>
+            </div>
         </div>
+
     </header>
     <main>
         <ul class="trilha-navegacao">
@@ -83,7 +100,7 @@
                 </div>
                 <div class="componentes-resumo">
                     <form action="" class="formulario-carrinho">
-                        <input class="input-cupom" type="text" placeholder="Inserir cupom..." name="input-cupom">
+                        <input class="input-cupom" type="text" placeholder="Inserir cupom...">
                         <button>Aplicar</button>
                     </form>
                     <a href="#">Encaminhar pedido ao vendedor</a>
@@ -104,50 +121,51 @@
 
     <div class="scroll-up"><a href="#Header">&#8593</a></div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="sobre-kirashop">
-                <h1>KIRASHOP</h1>
-                <p>Temos jogos que combinam com o seu estilo e que você vai ter orgulho de jogar. Dos clássicos retrô aos lançamentos da nova geração.</p>
+        <footer>
+            <div class="footer-container">
+                <div class="sobre-kirashop">
+                    <h1>KIRASHOP</h1>
+                    <p>Temos jogos que combinam com o seu estilo e que você vai ter orgulho de jogar. Dos clássicos retrô aos lançamentos da nova geração.</p>
+                </div>
+                <div class="infos-kirashop">
+                    <div class="institucional">
+                        <p class="titulo-lista">INSTITUCIONAL</p>
+                        <ul>
+                            <li><i class="fa-solid fa-book-open-reader"></i> Quem Somos</li>
+                            <li><i class="fa-solid fa-location-dot"></i> Localização</li>
+                            <li><i class="fa-solid fa-newspaper"></i> Newsletter</li>
+                            <li><i class="fa-solid fa-blog"></i> Blog</li>
+                        </ul>
+                    </div>
+                    <div class="ajuda">
+                        <p class="titulo-lista">AJUDA</p>
+                        <ul>
+                            <li><i class="fa-solid fa-headset"></i> Suporte ao Cliente</li>
+                            <li><i class="fa-solid fa-message"></i> Fale Conosco</li>
+                            <li><i class="fa-solid fa-file-signature"></i> Termos de Aceite</li>
+                            <li><i class="fa-solid fa-building-shield"></i> Política de Privacidade</li>
+                        </ul>
+                    </div>
+                    <div class="faq">
+                        <p class="titulo-lista"></i> FAQ</p>
+                        <ul>
+                            <li><i class="fa-solid fa-truck-fast"></i> Entrega</li>
+                            <li><i class="fa-solid fa-award"></i> Garantia</li>
+                            <li><i class="fa-solid fa-circle-info"></i> Como Comprar</li>
+                            <li><i class="fa-solid fa-money-bill"></i> Pagamentos</li>
+                        </ul>
+                    </div>
+                </div>      
             </div>
-            <div class="infos-kirashop">
-                <div class="institucional">
-                    <p class="titulo-lista">INSTITUCIONAL</p>
-                    <ul>
-                        <li>Quem Somos</li>
-                        <li>Localização</li>
-                        <li>Newsletter</li>
-                        <li>Blog</li>
-                    </ul>
-                </div>
-                <div class="ajuda">
-                    <p class="titulo-lista">AJUDA</p>
-                    <ul>
-                        <li>Suporte ao Cliente</li>
-                        <li>Fale Conosco</li>
-                        <li>Termos de Aceite</li>
-                        <li>Política de Privacidade</li>
-                    </ul>
-                </div>
-                <div class="faq">
-                    <p class="titulo-lista">FAQ</p>
-                    <ul>
-                        <li>Entrega</li>
-                        <li>Garantia</li>
-                        <li>Como Comprar</li>
-                        <li>Pagamentos</li>
-                    </ul>
-                </div>
-            </div>      
-        </div>
-        <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-        </div>
-        <hr class="separacao-allrights">
-        <p class="allrights">KIRASHOP © 2024-2025. <br class="quebra-allrights"> All Rights Reserved</p>
-    </footer>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <hr class="separacao-allrights">
+            <p class="allrights">KIRASHOP © 2024-2025. <br class="quebra-allrights"> All Rights Reserved</p>
+        </footer>
+    <script src="../js/script.js"></script>
 </body>
 </html>

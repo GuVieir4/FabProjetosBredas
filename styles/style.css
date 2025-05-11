@@ -192,7 +192,6 @@ body {
     color: #ffc633;
     transition: color 0.3s;
 }
-
 /* Fim da Seção de Avaliação */
 /* Fim da Seção Lançamentos */
 
@@ -258,33 +257,8 @@ body {
     width: 60%;
 }
 
-
-/* Ajustes Responsividade Header e Categorias */
+/* Ajustes Responsividade Seção Destaque e Categorias */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .search-bar {
-        max-width: 100%;
-        margin-top: 8px;
-    }
-
-    header a {
-        padding: 6px 10px;
-    }
-
-    .promo-register {
-        flex-direction: column;
-        padding: 10px 20px;
-        font-size: 13px;
-    }
-
-    .user-dropdown {
-        align-self: flex-end;
-    }
-
     .banner {
         display: none;
     }
@@ -332,30 +306,5 @@ body {
 
     .btnSubmit {
         width: 100%;
-    }
-}
-
-/* Responsividade do Menu Mobile */
-@media (max-width: 768px) {
-    .group {
-        display: none;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .hamburger-menu {
-        display: flex;
-    }
-
-    nav a {
-        display: none;
-    }
-
-    .mobile-menu.active {
-        display: flex;
     }
 }
