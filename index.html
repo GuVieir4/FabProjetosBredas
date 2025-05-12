@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="promo-register" id="promo-register">
-        <p><a href="./register.html">Cadastre-se</a> agora e ganhe 20% de desconto no seu primeiro pedido.<img id="icon-close" src="../images/icon-close.svg" alt="ícone de Close"></p>
+        <p><a href="/pages/register.html">Cadastre-se</a> agora e ganhe 20% de desconto no seu primeiro pedido.<img id="icon-close" src="../images/icon-close.svg" alt="ícone de Close"></p>
     </div>
     <header id="Header">
         <nav class="nav-bar">
@@ -63,17 +63,43 @@
         </div>
 
     </header>
-
+    
+    <nav class="quick-nav" ontouchstart="pauseScroll()" ontouchend="resumeScroll()">
+        <ul class="scroll-track" id="scrollTrack">
+        <li><a href="#"><i class="fas fa-microchip"></i> Processadores</a></li>
+        <li><a href="#"><i class="fas fa-memory"></i> Memória RAM</a></li>
+        <li><a href="#"><i class="fas fa-video"></i> Placas de Vídeo</a></li>
+        <li><a href="#"><i class="fas fa-hdd"></i> HDs & SSDs</a></li>
+        <li><a href="#"><i class="fas fa-broadcast-tower"></i> Placas-mãe</a></li>
+        <li><a href="#"><i class="fas fa-fan"></i> Coolers</a></li>
+        <li><a href="#"><i class="fas fa-bolt"></i> Fontes</a></li>
+        <li><a href="#"><i class="fas fa-desktop"></i> Gabinetes</a></li>
+        <li><a href="#"><i class="fas fa-keyboard"></i> Teclados</a></li>
+        <li><a href="#"><i class="fas fa-mouse"></i> Mouses</a></li>
+        <!-- Duplicação para efeito infinito -->
+        <li><a href="#"><i class="fas fa-microchip"></i> Processadores</a></li>
+        <li><a href="#"><i class="fas fa-memory"></i> Memória RAM</a></li>
+        <li><a href="#"><i class="fas fa-video"></i> Placas de Vídeo</a></li>
+        <li><a href="#"><i class="fas fa-hdd"></i> HDs & SSDs</a></li>
+        <li><a href="#"><i class="fas fa-broadcast-tower"></i> Placas-mãe</a></li>
+        <li><a href="#"><i class="fas fa-fan"></i> Coolers</a></li>
+        <li><a href="#"><i class="fas fa-bolt"></i> Fontes</a></li>
+        <li><a href="#"><i class="fas fa-desktop"></i> Gabinetes</a></li>
+        <li><a href="#"><i class="fas fa-keyboard"></i> Teclados</a></li>
+        <li><a href="#"><i class="fas fa-mouse"></i> Mouses</a></li>
+        </ul>
+    </nav>
+  
     <main>
 
         <div class="destaque-loja">
             <div class="chamada">
                 <h1>SEU SETUP, SEU ESTILO</h1>
-                <p>Explore diversas opções de marcas e encontre os periféricos do seu estilo.</p>
-                <a href="#">Compre agora</a>
-            </div>
-            <div class="banner">
-                <img src="./images/banner.svg" alt="Banner">
+                <p>Explore diversas opções de marcas e encontre tudo aquilo que sempre sonhou, com o melhor preço!</p>
+                <div class="botoes">
+                    <a href="#" class="btn-primary">Compre agora</a>
+                    <a href="#" class="btn-secondary">Conheça nossa marca</a>
+                </div>
             </div>
         </div>
 

@@ -23,7 +23,8 @@
 
 body {
     scroll-behavior: smooth;
-    background-color: var(--background-dark);
+    background: linear-gradient(135deg, #05070d, #0a0f1a, #16243f);
+    min-height: 100vh;
 }
 
 /* Telas Grandes */

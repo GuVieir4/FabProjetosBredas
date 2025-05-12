@@ -61,3 +61,14 @@ if (newsletterForm) {
             });
     });
 }
+
+// script para adptar animação de atalhos do menu para mobile
+  const scrollTrack = document.getElementById("scrollTrack");
+
+  function pauseScroll() {
+    scrollTrack.style.animationPlayState = "paused";
+  }
+
+  function resumeScroll() {
+    scrollTrack.style.animationPlayState = "running";
+  }
