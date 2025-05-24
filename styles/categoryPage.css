@@ -13,7 +13,7 @@
     --error-color: #881337;
 }
 
-* {
+*:not(dialog) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -97,7 +97,7 @@ aside .botao-filtro {
 
 .container-produtos {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .cards-produtos {
@@ -131,8 +131,17 @@ section hr {
     width: 100%;
 }
 
+dialog:not([open]) {
+  display: none;
+}
+
+dialog {
+    width: 100vw;
+    height: 100vh;
+}
+
 @media (max-width: 768px) {
-    aside {
+    .aside-desktop {
         display: none;
     }
 
@@ -160,5 +169,20 @@ section hr {
         margin-top: 10px;
         font-size: 20px;
         font-weight: 700;
+    }
+
+    section hr {
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    dialog {
+        background-color: var(--background-dark);
+        display: flex;
+    }
+
+    dialog aside {
+        width: auto;
+        height: auto;
     }
 }

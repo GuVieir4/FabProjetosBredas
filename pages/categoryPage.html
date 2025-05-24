@@ -13,7 +13,8 @@
 
 <body>
     <div class="promo-register" id="promo-register">
-        <p><a href="/pages/register.html">Cadastre-se</a> agora e ganhe 20% de desconto no seu primeiro pedido.<img id="icon-close" src="../images/icon-close.svg" alt="ícone de Close"></p>
+        <p><a href="/pages/register.html">Cadastre-se</a> agora e ganhe 20% de desconto no seu primeiro pedido.<img
+                id="icon-close" src="../images/icon-close.svg" alt="ícone de Close"></p>
     </div>
     <header id="Header">
         <nav class="nav-bar">
@@ -77,7 +78,7 @@
     </header>
 
     <main>
-        <aside>
+        <aside class="aside-desktop">
             <h3>Marcas</h3>
             <hr>
             <ul class="lista-marcas">
@@ -102,6 +103,11 @@
         </aside>
 
         <section class="container-produtos">
+            <div class="informacoes" style="display: flex; margin-bottom: 20px; justify-content: space-between;">
+                <button style="font-size: 32px; font-weight: bold; color: #2e54a6;
+                background-color: transparent; border: none; cursor: pointer;" class="open-modal"
+                    data-modal="modal-filtros">Mouses</button>
+            </div>
             <div class="cards-produtos">
                 <div class="card-produto">
                     <img src="../images/MouseAttackShark.svg" alt="Mouse Attack Shark">
@@ -138,72 +144,125 @@
         </section>
     </main>
 
-        <div class="container-newsletter">
-            <h1>FIQUE ATUALIZADO SOBRE NOSSAS ÚLTIMAS OFERTAS</h1>
-            <form id="newsletter-form">
-                <div class="input-group">
-                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
-                </div>
-                <button class="btnSubmit" type="submit" id="btnSubmit">Inscreva na Newsletter</button>
-            </form>
-        </div>
+    <div class="container-newsletter">
+        <h1>FIQUE ATUALIZADO SOBRE NOSSAS ÚLTIMAS OFERTAS</h1>
+        <form id="newsletter-form">
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+            </div>
+            <button class="btnSubmit" type="submit" id="btnSubmit">Inscreva na Newsletter</button>
+        </form>
+    </div>
 
-        <footer>
-            <div class="footer-container">
-                <div class="sobre-kirashop">
-                    <h1>KIRASHOP</h1>
-                    <p>Temos jogos que combinam com o seu estilo e que você vai ter orgulho de jogar. Dos clássicos retrô aos lançamentos da nova geração.</p>
+    <footer>
+        <div class="footer-container">
+            <div class="sobre-kirashop">
+                <h1>KIRASHOP</h1>
+                <p>Temos jogos que combinam com o seu estilo e que você vai ter orgulho de jogar. Dos clássicos retrô
+                    aos lançamentos da nova geração.</p>
+            </div>
+            <div class="infos-kirashop">
+                <div class="institucional">
+                    <p class="titulo-lista">INSTITUCIONAL</p>
+                    <ul>
+                        <li><i class="fa-solid fa-book-open-reader"></i> Quem Somos</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Localização</li>
+                        <li><i class="fa-solid fa-newspaper"></i> Newsletter</li>
+                        <li><i class="fa-solid fa-blog"></i> Blog</li>
+                    </ul>
                 </div>
-                <div class="infos-kirashop">
-                    <div class="institucional">
-                        <p class="titulo-lista">INSTITUCIONAL</p>
-                        <ul>
-                            <li><i class="fa-solid fa-book-open-reader"></i> Quem Somos</li>
-                            <li><i class="fa-solid fa-location-dot"></i> Localização</li>
-                            <li><i class="fa-solid fa-newspaper"></i> Newsletter</li>
-                            <li><i class="fa-solid fa-blog"></i> Blog</li>
-                        </ul>
-                    </div>
-                    <div class="ajuda">
-                        <p class="titulo-lista">AJUDA</p>
-                        <ul>
-                            <li><i class="fa-solid fa-headset"></i> Suporte ao Cliente</li>
-                            <li><i class="fa-solid fa-message"></i> Fale Conosco</li>
-                            <li><i class="fa-solid fa-file-signature"></i> Termos de Aceite</li>
-                            <li><i class="fa-solid fa-building-shield"></i> Política de Privacidade</li>
-                        </ul>
-                    </div>
-                    <div class="faq">
-                        <p class="titulo-lista"></i> FAQ</p>
-                        <ul>
-                            <li><i class="fa-solid fa-truck-fast"></i> Entrega</li>
-                            <li><i class="fa-solid fa-award"></i> Garantia</li>
-                            <li><i class="fa-solid fa-circle-info"></i> Como Comprar</li>
-                            <li><i class="fa-solid fa-money-bill"></i> Pagamentos</li>
-                        </ul>
-                    </div>
-                </div>      
+                <div class="ajuda">
+                    <p class="titulo-lista">AJUDA</p>
+                    <ul>
+                        <li><i class="fa-solid fa-headset"></i> Suporte ao Cliente</li>
+                        <li><i class="fa-solid fa-message"></i> Fale Conosco</li>
+                        <li><i class="fa-solid fa-file-signature"></i> Termos de Aceite</li>
+                        <li><i class="fa-solid fa-building-shield"></i> Política de Privacidade</li>
+                    </ul>
+                </div>
+                <div class="faq">
+                    <p class="titulo-lista"></i> FAQ</p>
+                    <ul>
+                        <li><i class="fa-solid fa-truck-fast"></i> Entrega</li>
+                        <li><i class="fa-solid fa-award"></i> Garantia</li>
+                        <li><i class="fa-solid fa-circle-info"></i> Como Comprar</li>
+                        <li><i class="fa-solid fa-money-bill"></i> Pagamentos</li>
+                    </ul>
+                </div>
             </div>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <hr class="separacao-allrights">
+        <p class="allrights">KIRASHOP © 2024-2025. <br class="quebra-allrights"> All Rights Reserved</p>
+    </footer>
+
+    <!-- Filtro pra quando for tela mobile -->
+    <dialog id="modal-filtros">
+        <aside>
+            <h3>Marcas</h3>
+            <hr>
+            <ul class="lista-marcas">
+                <li class="item-marcas">Attack Shark</li>
+                <li class="item-marcas">Corsair</li>
+                <li class="item-marcas">Logitech</li>
+                <li class="item-marcas">Razer</li>
+                <li class="item-marcas">Redragon</li>
+            </ul>
+            <hr>
+            <h3>Cores</h3>
+            <div class="filtro-cores">
+                <button class="item-cores">Cinza</button>
+                <button class="item-cores">Branco</button>
+                <button class="item-cores">Verde</button>
+                <button class="item-cores">Vermelho</button>
+                <button class="item-cores">Preto</button>
+                <button class="item-cores">Azul</button>
             </div>
-            <hr class="separacao-allrights">
-            <p class="allrights">KIRASHOP © 2024-2025. <br class="quebra-allrights"> All Rights Reserved</p>
-        </footer>
+            <hr>
+            <button class="botao-filtro close-modal" data-modal="modal-filtros">Aplicar Filtros</button>
+        </aside>
+    </dialog>
 
     <script>
         const botoes = document.querySelectorAll('.item-cores');
 
         botoes.forEach(botao => {
             botao.addEventListener("click", () => {
-                botoes.forEach(b => b.classList.remove('botao-ativo'))
+                const botaoAtivo = botao.classList.contains('botao-ativo');
 
-                botao.classList.add('botao-ativo')
-            })
-        })
+                botoes.forEach(b => b.classList.remove('botao-ativo'));
+
+                if (!botaoAtivo) {
+                    botao.classList.add('botao-ativo');
+                }
+            });
+        });
+
+        const openButtons = document.querySelectorAll('.open-modal');
+        const closeButtons = document.querySelectorAll('.close-modal');
+
+        openButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modalID = button.getAttribute('data-modal');
+                const modal = document.getElementById(modalID);
+
+                modal.showModal();
+            });
+        });
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modalID = button.getAttribute('data-modal');
+                const modal = document.getElementById(modalID);
+
+                modal.close();
+            });
+        });
     </script>
 
     <script src="../styles/categoryPage.js"></script>
