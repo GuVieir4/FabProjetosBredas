@@ -1,0 +1,128 @@
+* {
+    font-family: "Martian Mono", monospace;
+    color: var(--text-white);
+}
+
+/* Feirão kirashop */
+.mega-feirao {
+    position: relative;
+    padding: 60px 30px;
+    margin: 80px auto;
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(15, 20, 35, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.mega-feirao::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05), rgba(255,255,255,0.2));
+    background-size: 200% 200%;
+    animation: pulseBorder 8s ease infinite;
+
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+
+    z-index: -1;
+}
+
+@keyframes pulseBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.titulo-feirao {
+    font-size: clamp(22px, 5vw, 40px);
+    font-weight: 800;
+    color: var(--gray-200);
+    text-align: center;
+    font-family: "Martian Mono", monospace;
+    margin-bottom: 32px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.titulo-feirao .emoji {
+    font-size: 1.2em;
+}
+
+.produtos-feirao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 0 20px;
+}
+
+.produto-card {
+    background-color: rgba(30, 35, 55, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.produto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 16px rgba(255, 255, 255, 0.15);
+}
+
+.produto-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.produto-nome {
+    font-size: 16px;
+    color: var(--gray-200);
+    margin-bottom: 4px;
+}
+
+.preco-antigo {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.preco-novo {
+    color: var(--sucess-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-compra {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    background-color: var(--light-blue);
+    color: var(--text-white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-compra:hover {
+    background-color: var(--primary-blue);
+}

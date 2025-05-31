@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+
+/* Variáveis */
+:root {
+    --primary-blue: #2E54A6;
+    --light-blue: #6c63ff;
+    --background-dark: #10101E;
+    --text-white: #ffffff;
+    --gray-200: #c3c3d1;
+    --gray-400: #1e1e2c;
+    --gray-500: #181826;
+    --gray-800: #1a1a2e;
+    --sucess-color: #1d8338;
+    --error-color: #881337;
+    --sidebar-width: 270px;
+    --sidebar-collapsed-width: 120px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--gray-800);
+    padding-top: 20px;
+    transition: width 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    padding: 10px 20px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.menu-item:hover {
+    background-color: #2e54a6;
+}
+
+.sidebar.collapsed .menu-item {
+    justify-content: center;
+}
+
+.sidebar.collapsed .menu-item span+span {
+    display: none;
+}

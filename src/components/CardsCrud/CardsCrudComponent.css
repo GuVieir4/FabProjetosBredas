@@ -1,0 +1,161 @@
+*:not(dialog) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards-crud {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.card-crud {
+    display: flex;
+    width: 200px;
+    height: 150px;
+    background-color: #1e1e2c;
+    gap: 12px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1px solid var(--primary-blue);
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: transform 0.2s;
+}
+
+.card-crud::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.card-crud:hover {
+    border: 2px solid;
+    border-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+#post::before {
+    background-color: #49CC90;
+}
+
+#put::before {
+    background-color: #FCA130;
+}
+
+#get::before {
+    background-color: #61AFFE;
+}
+
+#delete::before {
+    background-color: #F93E3E;
+}
+
+.card-crud:hover::before {
+    width: 100%;
+}
+
+
+.card-crud a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+    border: none;
+    top: 25%;
+    width: 350px;
+    border-radius: 12px;
+    padding: 18px;
+    background: rgba(30, 32, 60, 0.85);
+    backdrop-filter: blur(0px);
+    box-shadow: 0 8px 32px var(--gray-500);
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-white);
+}
+
+.close-modal {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--gray-200);
+    font-size: 20px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-white);
+}
+
+.input-group input {
+    border: 1px solid var(--gray-200);
+    background-color: var(--gray-200);
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+.btn-confirm {
+    background-color: var(--primary-blue);
+    width: 250px;
+    height: 50px;
+    gap: 12px;
+    padding: 16px 54px;
+    border-radius: 12px;
+    border: 1px solid var(--primary-blue);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-confirm:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}

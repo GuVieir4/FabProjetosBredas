@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap');
+
+/* Variáveis */
+:root {
+    --primary-blue: #2E54A6;
+    --light-blue: #6c63ff;
+    --background-dark: #10101E;
+    --text-white: #ffffff;
+    --gray-200: #c3c3d1;
+    --gray-400: #1e1e2c;
+    --gray-500: #181826;
+    --sucess-color: #1d8338;
+    --error-color: #881337;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-white);
+}

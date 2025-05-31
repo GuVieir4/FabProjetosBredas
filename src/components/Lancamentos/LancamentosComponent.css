@@ -1,0 +1,115 @@
+* {
+    font-family: "Martian Mono", monospace;
+}
+
+.lancamentos {
+    margin-top: 70px;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gray-200);
+    text-align: center;
+}
+
+.container-lancamentos {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.container-lancamentos .nome-produto {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.container-lancamentos .valor-produto {
+    font-size: 24px;
+}
+
+.valor-produto span {
+    color: #2E54A6;
+}
+
+.cards-produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+.imagem-produto {
+    background-color: #f0eeed;
+    width: 245px;
+    height: 270px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.imagem-produto img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.info-produto {
+    margin-left: 0;
+}
+
+.info-produto .nome-produto {
+    margin-top: 10px;
+}
+
+/* Esquema de Avaliação Obtido no Uiverse */
+.avaliacao-produto {
+    display: inline-block;
+}
+
+.avaliacao-produto input {
+    display: none;
+}
+
+.avaliacao-produto label {
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.avaliacao-produto label:before {
+    content: '\2605';
+    font-size: 30px;
+}
+
+.avaliacao-produto input:checked~label, .avaliacao-produto label:hover, .avaliacao-produto label:hover~label {
+    color: #ffc633;
+    transition: color 0.3s;
+}
+/* Fim da Seção de Avaliação */
+/* Fim da Seção Lançamentos */
+
+/* Botão de Carregar mais Cards */
+.carregar-mais {
+    background-color: transparent;
+    width: 250px;
+    height: 50px;
+    gap: 12px;
+    padding: 16px 54px;
+    border-radius: 12px;
+    border: 1px solid var(--primary-blue);
+    margin: 70px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.carregar-mais:hover {
+    background-color: #1e1e2c;
+}
