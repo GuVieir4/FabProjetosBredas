@@ -1,0 +1,65 @@
+* {
+    font-family: "Martian Mono", monospace;
+}
+
+.container-categorias {
+    background-color: var(--primary-blue);
+    max-width: 1240px;
+    width: 90%;
+    border-radius: 40px;
+    margin: 70px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.titulo-categorias {
+    margin-top: 70px;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--gray-200);
+    text-align: center;
+}
+
+.container-categorias h3 {
+    font-size: 24px;
+    font-weight: 700px;
+    margin: 20px;
+    color: #09328a;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.container-categorias h3:hover {
+    color: #fff;
+    background-color: #09328a;
+}
+
+
+/* Tela Mobile */
+@media (max-width: 768px) {
+    .titulo-categorias {
+        font-size: 36px;
+    }
+
+    .container-categorias {
+        margin-top: 30px;
+    }
+
+
+    .container-categorias {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .container-categorias h3 {
+        font-size: 20px;
+        margin: 10px;
+    }
+
+}

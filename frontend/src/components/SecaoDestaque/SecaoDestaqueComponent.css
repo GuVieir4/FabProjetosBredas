@@ -1,0 +1,203 @@
+* {
+    font-family: "Martian Mono", monospace;
+}
+
+/* menu de navegação rapida, logo abaixo do menu principal */
+.quick-nav {
+    background: linear-gradient(to right, #2E54A6, #6c63ff);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    position: relative;
+    z-index: 5;
+}
+
+.quick-nav ul {
+    display: inline-flex;
+    animation: scrollLoop 30s linear infinite;
+}
+
+.quick-nav:hover ul {
+    animation-play-state: paused;
+}
+
+.quick-nav li {
+    list-style: none;
+    margin: 0 30px;
+}
+
+.quick-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.quick-nav a:hover {
+    color: #ffc633;
+}
+
+.quick-nav i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Animação de loop infinito */
+@keyframes scrollLoop {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Mobile: toque pausa a animação */
+@media (hover: none) {
+    .quick-nav ul {
+        animation-play-state: running !important;
+    }
+}
+
+/* Seção de Destaque */
+.destaque-loja {
+    position: relative;
+    height: 668px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    text-align: center;
+    color: var(--text-white);
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    animation: backgroundSlide 20s infinite;
+}
+
+.destaque-loja::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.chamada {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.chamada h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 80px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9); 
+}
+
+.chamada p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9);
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+    color: var(--text-white);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--light-blue), var(--primary-blue));
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--light-blue);
+    color: var(--light-blue);
+}
+
+.btn-secondary:hover {
+    background: var(--light-blue);
+    color: #000;
+}
+
+@keyframes backgroundSlide {
+    0% {
+        background-image: url('../../assets/backgroundSlide1.jpeg');
+    }
+    33% {
+        background-image: url('../../assets/backgroundSlide2.jpg');
+    }
+    66% {
+        background-image: url('../../assets/backgroundSlide3.jpg');
+    }
+    100% {
+        background-image: url('../../assets/backgroundSlide4.jpg');
+    }
+}
+
+.chamada h1 {
+    font-size: 38px;
+    line-height: 50px;
+    letter-spacing: 2px;
+}
+
+.botoes {
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* Banner de Marcas */
+.banner-marcas {
+    width: 100%;
+    background-color: var(--primary-blue);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    min-height: 120px;
+
+    & img {
+        margin: auto;
+        max-height: 100px;
+        max-width: 150px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+}

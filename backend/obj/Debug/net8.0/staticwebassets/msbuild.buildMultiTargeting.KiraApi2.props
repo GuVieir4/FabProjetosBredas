@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\KiraApi2.props" />
+</Project>
